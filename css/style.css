@@ -30,20 +30,20 @@ body {
   overflow: hidden;
 }
 
-.card .image {
+.card .card-images {
   width: 275px;
   height: 275px;
   border-radius: inherit;
   position: relative;
 }
 
-.card .image img {
+.card .card-images img {
   max-width: 100%;
   border-radius: inherit;
 }
 
-.card .image::after,
-.card .image .view {
+.card .card-images::after,
+.card .card-images .view-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -51,7 +51,7 @@ body {
   opacity: 0;
 }
 
-.card .image::after {
+.card .card-images::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -59,18 +59,18 @@ body {
   border-radius: inherit;
 }
 
-.card .image:hover::after {
+.card .card-images:hover::after {
   opacity: 1;
 }
 
-.card .image .view {
+.card .card-images .view-image {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
 }
 
-.card .image:hover .view {
+.card .card-images:hover .view-image {
   opacity: 1;
 }
 
@@ -92,7 +92,7 @@ body {
   margin-bottom: 12px;
 }
 
-.card .stats {
+.card .card-stats {
   display: flex;
   justify-content: space-between;
   padding-bottom: 15px;
@@ -100,41 +100,41 @@ body {
   border-bottom: 1px solid var(--very-dark-blue);
 }
 
-.card .stats img {
+.card .card-stats img {
   margin-right: 5px;
   transform: translateY(20%);
 }
 
-.card .stats .ethereum-score {
+.card .card-stats .ethereum-score {
   color: var(--cyan);
   font-weight: bold;
 }
 
-.card .stats .date {
+.card .card-stats .date {
   color: #91b1de;
 }
 
-.card .author {
+.card .card-author {
   display: flex;
   align-items: center;
 }
 
-.card .author img {
+.card .card-author img {
   max-width: 30px;
   margin-right: 15px;
   border-radius: 50%;
   border: 1px solid var(--white);
 }
 
-.card .author span {
+.card .card-author span {
   color: #91b1de;
 }
 
-.card .author .name {
+.card .card-author .author-name {
   color: var(--white);
   transition: color var(--main-transition);
 }
 
-.card .author .name:hover {
+.card .card-author .author-name:hover {
   color: var(--cyan);
 }
